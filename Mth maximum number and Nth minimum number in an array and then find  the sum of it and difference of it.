@@ -1,0 +1,22 @@
+import java.util.Arrays;
+
+public class MaxMinSumDifference {
+    public static void main(String[] args) {
+        int[] arr = {14, 16, 87, 36, 25, 89, 34};
+        int M = 1; 
+        int N = 3; 
+
+        Arrays.sort(arr);
+        int nthMin = arr[N - 1]; 
+
+        Arrays.sort(arr); 
+        int mthMax = arr[arr.length - M]; 
+        int sum = mthMax + nthMin;
+        int difference = mthMax - nthMin;
+
+        System.out.println("1st Maximum Number = " + mthMax);
+        System.out.println("3rd Minimum Number = " + nthMin);
+        System.out.println("Sum = " + sum);
+        System.out.println("Difference = " + difference);
+    }
+}
